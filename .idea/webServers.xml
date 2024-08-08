@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bda79b56-f689-4076-8242-4411aa692f2d" name="Centos Web Server">
+        <fileTransfer rootFolder="/opt/lampp/htdocs" accessType="SFTP" host="192.168.10.2" port="22" sshConfigId="6640d247-ee44-4c8e-8bf3-0e5799765191" sshConfig="fei@192.168.10.2:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

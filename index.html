@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Paris 2024</title>
+    <meta name="description" content="Most anticipated international sport event filled with excitement and flamboyant performances from athletes all around the worlds">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!--    header + nav-->
+    <header>
+        <nav role="navigation" class="navbar">
+            <div>
+                <img src="./images/logo-black.png" alt="Logo for Olympic Paris 2024" class="navbar-brand">
+            </div>
+            <label for="toggle-menu"><img src="./images/menuburger.svg" alt="Hamburger Icon" role="button"></label>
+            <input type="checkbox" name="toggle-menu" id="toggle-menu" hidden>
+            <ul class="navbar-nav" role="menubar">
+                <li class="nav-item" role="menuitem">
+                    <a href="#section-countdown" class="nav-link">CountDown</a>
+                </li>
+                <li class="nav-item" role="menuitem">
+                    <a href="#section-road" class="nav-link">Road To Paris</a>
+                </li>
+                <li class="nav-item" role="menuitem">
+                    <a href="#section-about" class="nav-link">About the Games</a>
+                </li>
+                <li class="nav-item" role="menuitem">
+                    <a href="#section-shop" class="nav-link">Olympic Shop</a>
+                </li>
+                <li class="nav-item" role="menuitem">
+                    <a href="#section-partner" class="nav-link">Worldwide Partners</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<!--main content-->
+    <main role="main">
+<!--        hero section-->
+        <section aria-label="Hero Section" id="section-hero">
+            <div id="hero-wrapper">
+                <h1 class="text-end mb-1-2">The Olympic Games</h1>
+                <h2 class="text-end mb-1-2">of Paris 2024</h2>
+                <img src="./images/logos-white.png" alt="Logo of Olympic Paris 2024" id="img-hero-logo">
+            </div>
+            <picture>
+                <source media="(min-width: 1024px)" srcset="./images/mascot-lg.png" sizes="100vw">
+                <source media="(min-width: 800px)" srcset="./images/mascot-md.png" sizes="100vw">
+                <source media="(min-width: 0px)" srcset="./images/mascot-sm.png" sizes="100vw">
+                <img src="./images/mascot-sm.png" alt="Mascot's Picture" id="hero-mascot">
+            </picture>
+
+            <div id="hero-nav">
+                <img src="./images/btn-prev.svg" alt="Prev Image Button" role="button" id="hero-nav-prev">
+                <div id="hero-dots">
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <img src="./images/btn-next.svg" alt="Prev Image Button" role="button" id="hero-nav-next">
+            </div>
+        </section>
+<!--        countdown section-->
+        <section aria-label="Countdown Section" id="section-countdown" class="container">
+            <div id="countdown-wrapper" >
+                <h1 class=" text-center mb-3 text-gradient section-heading-1">CountDown</h1>
+                <div class="mb-1 text-center text-poppins">
+                    <div>Olympic Games Paris 2024</div>
+                    <small class="d-block mx-auto text-natural-3">26 July - 11 August,</small>
+                </div>
+                 <article id="countdown-time-wrapper">
+                     <div></div>
+                     <div id="countdown-time" class="text-center">
+                         <div id="time">
+                             28<span class="divider">:</span>13<span class="divider">:</span>45<span class="divider">:</span>05
+                         </div>
+                        <div id="time-label"><span>Days</span><span>Hours</span><span>Minutes</span><span>Seconds</span></div>
+                     </div>
+                     <img src="./images/logos-countdown.png" alt="Logo of Olympic" class="img-fluid" >
+                 </article>
+            </div>
+        </section>
+
+        <!--        road to paris section-->
+        <section aria-label="Road To Paris Section" id="section-road" >
+            <div id="road-wrapper" class="container">
+                <h1 class="text-center mb-3 text-gradient section-heading-2">Road to Paris</h1>
+                <div class="columns-outer-container">
+                    <div class="columns-container mb-1">
+                        <article class="column">
+                            <img src="./images/road-01.png" alt="Image Of 2024 FIBA">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 FIBA</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>02-05 May</span></div>
+                            </div>
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-02.png" alt="Image Of 2024 UWV">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 UWV</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>08-12 May</span></div>
+                            </div>
+
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-03.png" alt="Image Of 2024 UIPM">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 UIPM</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>09-12 May</span></div>
+                            </div>
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-04.png" alt="Image Of 2024 ISSF">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 ISSF</strong>
+                                <p class="text-natural-3 mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>14-27 May</span></div>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <img src="./images/road-01.png" alt="Image Of 2024 FIBA">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 FIBA</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>02-05 May</span></div>
+                            </div>
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-02.png" alt="Image Of 2024 UWV">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 UWV</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>08-12 May</span></div>
+                            </div>
+
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-03.png" alt="Image Of 2024 UIPM">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 UIPM</strong>
+                                <p class="text-natural-3  mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>09-12 May</span></div>
+                            </div>
+                        </article>
+                        <article class="column">
+                            <img src="./images/road-04.png" alt="Image Of 2024 ISSF">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">2024 ISSF</strong>
+                                <p class="text-natural-3 mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                                <div class="date text-natural-1 text-poppins">&#128197; <span>14-27 May</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+
+                <div id="road-nav" class="slide-nav">
+                    <img src="./images/btn-prev.svg" alt="Prev Image Button" role="button" id="road-nav-prev" class="btn-slide">
+                    <div id="road-nav-position" class="text-poppins">
+                        <span id="road-nav-index"></span>/2
+                    </div>
+                    <label for="road-next-1">
+                        <img src="./images/btn-next.svg" alt="Prev Image Button" role="button" id="road-nav-next" class="btn-slide">
+                    </label>
+                    <input type="radio" name="road-next" id="road-next-1" hidden>
+                </div>
+            </div>
+        </section>
+
+        <!--        about the games section-->
+        <section aria-label="About the Games Section" id="section-about">
+            <div id="about-wrapper" class="container">
+                <h1 class="text-center mb-3 text-gradient section-heading-1">About the Games</h1>
+                <div class="columns-outer-container">
+                    <div class="columns-container mb-1">
+                        <article class="column">
+                            <div class="d-block text-paris">SPORTS</div>
+                            <img src="./images/about-01.png" alt="Thumbnail Image Of Sports">
+                            <div class="column-text">
+                                <p class="mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <div class="d-block text-paris">VENUES</div>
+                            <img src="./images/about-02.png" alt="Thumbnail Image Of Venues">
+                            <div class="column-text">
+                                <p class="mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </article>
+
+
+                        <article class="column">
+                            <div class="d-block text-paris">CELEBRATING THE GAMES</div>
+                            <img src="./images/about-03.png" alt="Thumbnail Image Of CELEBRATING THE GAMES">
+                            <div class="column-text">
+                                <p class="mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <div class="d-block text-paris">SPECTATOR INFORMATION</div>
+                            <img src="./images/about-04.png" alt="Thumbnail Image Of SPECTATOR INFORMATION">
+                            <div class="column-text">
+                                <p class="mb-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div id="about-nav" class="slide-nav">
+                    <img src="./images/btn-prev.svg" alt="Prev Image Button" role="button" id="about-nav-prev" class="btn-slide">
+                    <div id="about-nav-position" class="text-poppins">
+                        1/4
+                    </div>
+                    <img src="./images/btn-next.svg" alt="Prev Image Button" role="button" id="about-nav-next" class="btn-slide">
+                </div>
+
+                <img src="./images/logo-emblem.png" id="img-about-logo" alt="Logo of Olympic Paris 2024" class="mx-auto d-block img-fluid">
+            </div>
+
+
+        </section>
+
+
+        <!--        road to paris section-->
+        <section aria-label="Olympic Shop Section" id="section-shop" >
+            <div id="shop-wrapper" class="container">
+                <h1 class="text-center mb-3 text-gradient section-heading-2">Olympic Shop</h1>
+
+                <a href="" class="text-poppins text-end d-block mb-1">See more products</a>
+                <div class="columns-outer-container">
+                    <div class="columns-container mb-1">
+                        <article class="column">
+                            <img src="./images/shop-01.png" alt="Image Of Latin Crest T-Shirt-White">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">Latin Crest T-Shirt-White</strong>
+                                <div>
+                                    <button class="btn-primary">BUY NOW</button>
+
+                                    <span class="price text-natural-3">&euro;42</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <img src="./images/shop-02.png" alt="Image Of Logo Graphic T-Shirt-White">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">Logo Graphic T-Shirt-White</strong>
+                                <div>
+                                    <button class="btn-primary">BUY NOW</button>
+
+                                    <span class="price text-natural-3">&euro;45</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <img src="./images/shop-03.png" alt="Image Of Plush Mascot-15 cms">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">Plush Mascot-15 cms</strong>
+                                <div>
+                                    <button class="btn-primary">BUY NOW</button>
+
+                                    <span class="price text-natural-3">&euro;25</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="column">
+                            <img src="./images/shop-04.png" alt="Image Of Bobble Beanie">
+                            <div class="column-text">
+                                <strong class="d-block mb-1 text-paris">Bobble Beanie</strong>
+                                <div>
+                                    <button class="btn-primary">BUY NOW</button>
+                                    <span class="price text-natural-3">&euro;35</span>
+                                </div>
+                            </div>
+                        </article>
+
+
+                    </div>
+                </div>
+
+
+                <div id="shop-nav" class="slide-nav">
+                    <img src="./images/btn-prev.svg" alt="Prev Image Button" role="button" id="shop-nav-prev" class="btn-slide">
+                    <div id="shop-nav-position" class="text-poppins">
+                        1/4
+                    </div>
+                    <img src="./images/btn-next.svg" alt="Prev Image Button" role="button" id="shop-nav-next" class="btn-slide">
+                </div>
+            </div>
+        </section>
+
+        <!--        worldwide partners section-->
+        <section aria-label="Worldwide Partners Section" id="section-partner">
+            <div id="partner-wrapper" class="container">
+                <h1 class="text-center mb-3 text-gradient section-heading-1">Worldwide Partners</h1>
+                
+                <div class="partners mb-2">
+                    <div class="partners-row">
+                        <img src="./images/partners/partner-01.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-02.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-03.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-04.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-05.png" alt="Image of Partner Company" class="partner">
+                    </div>
+
+                    <div class="partners-row">
+                        <img src="./images/partners/partner-06.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-07.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-08.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-09.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-10.png" alt="Image of Partner Company" class="partner">
+                    </div>
+
+                    <div class="partners-row">
+                        <img src="./images/partners/partner-11.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-12.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-13.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-14.png" alt="Image of Partner Company" class="partner">
+                        <img src="./images/partners/partner-15.png" alt="Image of Partner Company" class="partner">
+                    </div>
+                </div>
+
+                <div id="partner-nav" class="slide-nav">
+                    <img src="./images/btn-prev.svg" alt="Prev Image Button" role="button" id="partner-nav-prev" class="btn-slide">
+                    <div id="partner-nav-position" class="text-poppins">
+                        1/4
+                    </div>
+                    <img src="./images/btn-next.svg" alt="Prev Image Button" role="button" id="partner-nav-next" class="btn-slide">
+                </div>
+            </div>
+
+
+        </section>
+
+    </main>
+<!--footer-->
+    <footer role="contentinfo">
+        <div class="footer-wrapper text-poppins">
+            <div class="footer-row">
+                <div>
+                    <div class="mb-1">Download the Official App</div>
+                    <a href="" class="download-link">
+                        <img src="./images/icons-app.png" alt="Click to get redirected to the play store for downloading the app">
+                    </a>
+                </div>
+                <div>
+                    <div  class="mb-1">
+                        Follow us on
+                    </div>
+                    <a href="">
+                        <img src="./images/icons-social.svg" alt="Click to visit our social media page">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <img src="./images/logos-white.png" class="d-block img-fluid mx-auto" alt="Logo of Olympic Paris 2024">
+            </div>
+            <div class="footer-row text-center" id="copyright">
+                Copyright 2024. All rights reserved
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

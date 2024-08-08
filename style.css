@@ -1,0 +1,572 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*variables*/
+:root{
+    --primary-color: #002395;
+    --secondary-color: #ED2939;
+    --third-color: #D5E2F0;
+    --natural-color-1: #333333;
+    --natural-color-2: #474747;
+    --natural-color-3: #888888;
+    --main-gradient: linear-gradient(to right, var(--secondary-color),var(--primary-color));
+}
+/*import external fonts*/
+@font-face {
+    font-family:  "Paris2024";
+    src: url("./fonts/Paris2024/Paris2024-Variable.ttf");
+}
+
+@font-face {
+    font-family:  "Poppins-Regular";
+    src: url("./fonts/Poppins/Poppins-Regular.ttf");
+}
+html{
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.5;
+}
+h1{
+    font-family: "Paris2024" , serif;
+    font-size: clamp(2.5rem, 10vw,4.5rem);
+}
+h2{
+    font-family: "Paris2024" , serif;
+    font-size: clamp(2.25rem, 8vw,4.25rem);
+}
+p{
+    font-family: "Poppins-Regular" , sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+.mb-1-2{
+    margin-bottom: .5rem;
+
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-3{
+    margin-bottom: 3rem!important;
+}
+.mx-auto{
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.text-end{
+    text-align: end;
+}
+.d-block{
+    display: block;
+}
+.text-natural-1{
+    color: var(--natural-color-1);
+}
+.text-natural-2 {
+    color: var(--natural-color-2);
+}
+.text-natural-3 {
+    color: var(--natural-color-3);
+}
+.text-gradient{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--main-gradient);
+}
+.container{
+    max-width: 1440px;
+    padding: 6rem 2rem;
+    margin: 0 auto;
+}
+.text-paris{
+    font-family: "Paris2024" , serif;
+}
+.text-poppins{
+    font-family: "Poppins-Regular" , sans-serif;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/*header + nav*/
+.navbar{
+    position: relative;
+    height: 80px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.navbar label> img{
+    cursor: pointer;
+    display: none;
+}
+.navbar-nav{
+    display: flex;
+    z-index: 9999;
+}
+.nav-link{
+    position: relative;
+    display: block;
+    padding: 1.5rem 0.9rem;
+    font-family: "Paris2024" , serif;
+    color: var(--natural-color-1);
+    font-weight: bold;
+}
+/*add the tilted borders*/
+.nav-link::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid var(--primary-color);
+    transform: skewX(-35deg);
+    transition: all 0.4s ease;
+}
+.nav-link:hover{
+    color: var(--third-color);
+}
+.nav-link:hover::before{
+    /*background-color: var(--primary-color);*/
+    background-image: var(--main-gradient);
+    z-index: -1;
+}
+.nav-item:nth-child(5) .nav-link::before{
+    border-right: 2px solid var(--primary-color);
+
+}
+
+/*hero section*/
+#section-hero{
+    position: relative;
+    background-image: url("./images/hero-lg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0 , 100% 0%, 100% 90%, 0% 100%);
+}
+/*apply filter*/
+#section-hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    z-index: -1;
+    backdrop-filter: brightness(0.85);
+}
+#hero-wrapper{
+    padding: 1rem;
+    color: white;
+}
+#img-hero-logo{
+    display: block;
+    margin-left: auto;
+}
+#hero-nav{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+#hero-nav > img{
+    cursor: pointer;
+}
+#hero-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.85rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.25rem;
+    gap: 0.5rem;
+
+}
+#hero-dots > div{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: var(--natural-color-3);
+    border-radius: 2rem;
+}
+#hero-dots > div.active{
+    background-color: white;
+}
+/*countdown section*/
+
+.section-heading-1{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.section-heading-1::after{
+    position: absolute;
+    bottom: -25%;
+    content: url("./images/lines-titles.png");
+    left: -20%;
+}
+#countdown-time-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Paris2024" , serif;
+}
+#countdown-time-wrapper > img{
+    display: block;
+
+}
+#countdown-time-wrapper > *{
+    flex-basis: 33.33%;
+}
+#countdown-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#time-label{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: var(--natural-color-3);
+
+}
+#time{
+    font-size: clamp(2.5rem, 10vw,4.5rem);
+    color: var(--natural-color-2);
+}
+#time > .divider{
+    color: var(--natural-color-3);
+}
+
+/*road to paris*/
+.section-heading-2{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.section-heading-2::after{
+    position: absolute;
+    bottom: -25%;
+    content: url("./images/lines-titles.png");
+    right: -20%;
+}
+.columns-container{
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.column{
+    flex: 1 0 calc(25% - 1rem);
+    --col-width: calc(25% - 1rem);
+    border-radius: 4px;
+    background-color: white;
+    height: fit-content;
+    overflow: hidden;
+}
+.column img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+.column-text{
+    padding: 0 1rem 1rem;
+}
+#section-road{
+    background-color: var(--third-color);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+.column:hover > img{
+    transform: scale(1.1);
+}
+.slide-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:0.5rem;
+}
+.btn-slide{
+    cursor: pointer;
+}
+.columns-outer-container{
+    overflow-x: hidden;
+}
+
+#road-nav-next{
+    fill: var(--natural-color-1);
+}
+#road-nav-index::before{
+    content: "1";
+}
+#road-wrapper:has(#road-next-1:checked) .columns-container{
+    animation: slideRight 0.5s ease forwards;
+}
+#road-wrapper:has(#road-next-1:checked) #road-nav-index::before{
+    content:"2";
+}
+@keyframes slideRight {
+    /*from {*/
+    /*    margin-left: 0;*/
+    /*}*/
+    to {
+        margin-left: calc((-25% * 4));
+    }
+}
+/*about*/
+#about-wrapper .column {
+    background-color: var(--third-color);
+}
+#about-wrapper .column > div:first-child{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.75rem;
+}
+/*shop section*/
+#section-shop{
+    background-color: var(--third-color);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+#shop-wrapper a{
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+#shop-wrapper .column{
+    padding: 0.75rem;
+}
+#shop-wrapper .column-text{
+    padding: 0;
+}
+#shop-wrapper .column-text > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-primary{
+    background-color: var(--natural-color-1);
+    color: white;
+    font-family: "Paris2024" ,serif;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+.btn-primary:hover{
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    transform: translateY(-1px) translateX(-1px);
+}
+.price{
+    font-size: clamp(1.5rem , 5vw, 2rem);
+    font-family: "Paris2024" , serif;
+}
+/*partners*/
+#partner-nav{
+    display: none;
+}
+/*.partners{*/
+/*    !*display: grid;*!*/
+/*    !*grid-template-columns: repeat(5 , 1fr);*!*/
+/*    !*grid-template-rows: repeat( 3 , 1fr);*!*/
+/*    display: flex;*/
+/*    gap: 1rem;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+.partners-row{
+    display: flex;
+    gap: 1rem;
+    overflow-x: hidden;
+}
+.partner{
+    flex: 0 0 calc((100%/5 -  1rem));
+    margin: 0 auto 1rem;
+    object-fit: cover;
+}
+/*footer*/
+footer{
+    background-image: linear-gradient(to right, var(--natural-color-2) 50%, var(--natural-color-3) 50%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 1rem 2rem;
+    color: white;
+    height: 600px;
+}
+.footer-row{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+/*tablet styles*/
+@media screen and (max-width: 1024px){
+/*    navbar*/
+    .navbar{
+        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 0.5rem 0;
+
+    }
+    .navbar-brand{
+        height: 100%;
+    }
+    .navbar label> img{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+    .navbar-nav{
+       display: block;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-link::before{
+        display: none;
+    }
+    .navbar >  div:has(.navbar-brand){
+        position: relative;
+    }
+    .navbar > div:has(.navbar-brand)::after{
+        padding: 0.75rem;
+        position: absolute;
+        content: "";
+        top: -1rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-right: 2px solid var(--primary-color);
+        transform: skewX(-35deg);
+    }
+    #toggle-menu:checked  + .navbar-nav{
+        height: calc(5 * 81px);
+    }
+    .nav-link:hover{
+        color: var(--third-color);
+        background-image: var(--main-gradient);
+    }
+/*countdown section*/
+    #countdown-time-wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #countdown-time-wrapper > div:first-child{
+        display: none;
+    }
+/*    road section*/
+    .columns-container{
+        justify-content: flex-start;
+    }
+    .column{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    /*partners*/
+    #partner-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .partner{
+        flex: 0 0 calc((100%/3 - 1rem));
+    }
+}
+
+/*mobile phone styles*/
+@media screen and (max-width: 800px){
+/*    hero*/
+    #hero-mascot{
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10%;
+        filter: drop-shadow(1px 1px 2px black);
+    }
+    #img-hero-logo{
+        margin:  0  auto;
+    }
+    #hero-dots{
+        display: none;
+    }
+    #hero-nav-prev{
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #hero-nav{
+        position: static;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+    #hero-nav-next{
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    /*    road section*/
+    .column{
+        flex: 0 0 calc(100% - 1rem);
+    }
+
+/*    partner section*/
+    .partner{
+        flex: 0 0 calc((100%/2 - 1rem));
+    }
+/*    footer*/
+    footer{
+        background-color: var(--natural-color-1);
+        background-image: none;
+    }
+    .footer-wrapper{
+        padding: 5rem 0.5rem 2rem;
+    }
+    .footer-row{
+        flex-wrap: wrap;
+        gap: 3rem;
+        flex-direction: column;
+    }
+
+}
